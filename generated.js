@@ -13,11 +13,13 @@ function run() {
     console.log(iceCreamChoiceIterator)
 
     //console.log(iceCreamChoices);
-    var it;
-    do {
-        it = iceCreamChoiceIterator.next();
+    for (;;) {
+        var it = iceCreamChoiceIterator.next();
+        if (it.done) {
+            break;
+        }
         console.log("choice", it.value);
-    } while (!it.done);
+    }
 }
 
 run();
