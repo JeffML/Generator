@@ -1,17 +1,23 @@
 module.exports = {
-    iceCream: {
-        min: 1,
-        max: 2,
-        values: ["CHOCOLATE", "STRAWBERRY", "VANILLA"]
-    },
-    topping: {
+    threeItems: {
         min: 0,
-        max: 2,
-        values: ["pineapple", "strawberry", "coconut flakes", "pecans"]
+        max: 3,
+        values: [1, 2, 3]
     },
-    syrup: {
+    sixItems: {
         min: 0,
-        max: 1,
-        values: ["chocolate", "marshmallow", "butterscotch", "maple"]
+        max: 6,
+        values: [1, 2, 3, 4, 5, 6]
+    },
+    twelveItems: {
+        min: 0,
+        max: 12,
+        values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    },
+    thirtyItems: {
+        min: 0,
+        max: 30,
+        values: Array.from(Array(30)
+            .keys())
     }
 }

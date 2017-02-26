@@ -1,21 +1,17 @@
-var _ = require('lodash');
 var menu = require('./menu');
-
-var CombinatorGenerator = require('./Combinator-generator');
+var Combinator = require('./Combinator-generator');
 
 function run() {
-    var iceCreamChoiceIterator = new CombinatorGenerator({
-            min: menu.iceCream.min,
-            max: menu.iceCream.max
+    var threeCombos = new Combinator({
+            min: menu.threeItems.min,
+            max: menu.threeItems.max
         })
-        .combine([], menu.iceCream.values);
+        .combine([], menu.threeItems.values);
 
-    console.log(iceCreamChoiceIterator)
-
-    //console.log(iceCreamChoices);
     for (;;) {
-        var it = iceCreamChoiceIterator.next();
+        var it = threeCombos.next();
         if (it.done) {
+            console.log("done!")
             break;
         }
         console.log("choice", it.value);
